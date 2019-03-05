@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../static/css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="../static/local.css"  media="screen,projection"/>
+      <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body style="background-color:#F4F4F2; height:100%;">
+
+      <!--Double navigation-->
+      <header>
+          <!-- Navbar -->
+          <!-- ADD <div class="navbar-fixed"> TO MAKE THE NAVBAR FIXED. -->
+
+
+          <div class="nav-wrapper">
+            <nav style="background-color:#E84A27">
+                <a href="/"><img src="../static/images/cute-dinosaur.png" class="responsive-img" style="height: 65px; vertical-align: middle; padding-top: 5px; padding-bottom: 5px; padding-left: 10px"></a>
+                <a href="/" style="height: 65px; color:white;font-family: 'Dekko'; font-size:225%; padding-left:10px; vertical-align: middle;">RSOsaurus</a>
+                <a href="quiz" class="waves-effect waves-light btn-small right" style="background-color: #15294C; width:12%; height:100%; padding-right: 2px; padding-left: 3px"><i class="material-icons left">short_text</i>Take RSO Quiz</a>
+            </nav>
+          </div>
+      </header>
+      <!--/.Double navigation-->
+
+      <!--Main layout-->
+        <div class="row center" style="padding-left: 5px; vertical-align: middle;">
+          <span class="container center">
+            <p class="chip" style="color: white; background-color: #E84A27;">Category: {{ data[0][1] }}</p>
+            <p class="chip" style="color: white; background-color: #E84A27;">Meeting Time: {{ data[0][3] }}</p>
+            <p class="chip" style="color: white; background-color: #E84A27;">Time Commitment: {{ data[0][2] }}</p>
+            <p class="chip" style="color: white; background-color: #E84A27;">Dues: ${{ data[0][4] }}</p>
+            <p class="chip" style="color: white; background-color: #E84A27;">Activity Level: {{ data[0][5] }}</p>
+            <p class="chip" style="color: white; background-color: #E84A27;">Longevity (Age): {{ data[0][6] }}</p>
+            <p class="chip" id="lim_mem" style="color: white; background-color: #E84A27;"></p>
+            <p class="chip" id="recruit" style="color: white; background-color: #E84A27;"></p>
+          </span>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="video-container">
+              <iframe id= "youtubeVid" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="col s12 m6">
+            <h4 align="center">{{ data[0][0] }}</h4>
+            <span font-size=8px>
+              {{ data[0][9] }} Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</br>
+              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="month">      
+              <ul>
+                <li class="prev">&#10094;</li>
+                <li class="next">&#10095;</li>
+                <li>
+                  December<br>
+                  <span style="font-size:18px">2017</span>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="weekdays">
+              <li>Mon</li>
+              <li>Tue</li>
+              <li>Wed</li>
+              <li>Thr</li>
+              <li>Fri</li>
+              <li>Sat</li>
+              <li>Sun</li>
+            </ul>
+
+            <ul class="days">  
+              <li><span class="active">1</span></li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>10</li>
+              <li>11</li>
+              <li><a class="event tooltipped" data-html="true" data-delay="50" data-tooltip="What: Happy Hour!<br>When: 7pm<br>Where: Legends">12</a></li>  
+              <li>13</li>
+              <li>14</li>
+              <li><a class="event tooltipped" data-html="true" data-delay="50" data-tooltip="What: Meeting<br>When: 7pm<br>Where: Student Union">15</a></li>
+              <li>16</li>
+              <li>17</li>
+              <li>18</li>
+              <li><a class="event tooltipped" data-html="true" data-delay="50" data-tooltip="What: Happy Hour!<br>When: 7pm<br>Where: Legends">19</a></li>  
+              <li>20</li>
+              <li>21</li>
+              <li><a class="event tooltipped" data-html="true" data-delay="50" data-tooltip="What: Meeting<br>When: 7pm<br>Where: Student Union">22</a></li>
+              <li>23</li>
+              <li>24</li>
+              <li>25</li>
+              <li><a class="event tooltipped" data-html="true" data-delay="50" data-tooltip="What: Happy Hour!<br>When: 7pm<br>Where: Legends">26</a></li>  
+              <li>27</li>
+              <li>28</li>
+              <li><a class="event tooltipped" data-html="true" data-delay="50" data-tooltip="What: Meeting<br>When: 7pm<br>Where: Student Union">29</a></li>
+              <li>30</li>
+              <li>31</li>
+            </ul>
+          </div>
+
+          <div class="col s12 m6">
+            <h4 align="center">Key Members</h4>
+            <div class="row" style="align: center;">
+              <div class="container">
+                <div class="col s12 m4">
+                  <img class="circle materialboxed" data-caption="This is our President, Lord, and Savior, the Happy Man." width="100%" src="../static/images/member_img_1.jpg">
+                </div>
+                <div class="col s12 m4">
+                  <img class="circle materialboxed" data-caption="Smile's are wonderful members." width="100%" src="../static/images/member_img_2.jpg">
+                </div>
+                <div class="col s12 m4">
+                  <img class="circle materialboxed" data-caption="This is our Vice President, Lord, and Savior, the Happy Man." width="100%" src="../static/images/member_img_1.jpg">
+                </div>
+              </div>
+            </div>
+            <h5 align="center">Contact Info</h5>
+            <p style="text-align: center">
+              someone@email.com
+            </p>
+        </div>
+      </div>
+      <!--/Main layout-->
+
+      <!--Footer-->
+      <footer>
+
+      </footer>
+      <!--Footer--> 
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+      <script>
+      // Initialize collapse button
+        $(document).ready(function(){
+          $('.button-collapse').sideNav();
+          $('select').material_select();
+          $('.materialboxed').materialbox();
+          $(function() {
+            $('#btnSearch').click(function() {
+                console.log("GET DATA")
+                console.log($('form'))
+                $.ajax({
+                    url: '/search',
+                    data: $('form').serialize(),
+                    type: 'POST',
+                    success: function(response) {
+                        console.log(response);
+                        $("#relevant_rsos").empty();
+                        $("#relevant_rsos").append(response);
+
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            });
+          });
+        // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+        });
+      </script>
+      <!-- Compiled and minified CSS -->
+      <!-- <link rel="stylesheet" href="../static/node_modules/materialize-css/dist/css/materialize.css"> -->
+
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+      <!-- Load in binary info into categories and get Youtube URL -->
+      <script type="text/javascript">
+        window.onload = function() {
+          var videoId = ('{{ data[0][10] }}');
+
+          var embedURL = "//www.youtube.com/embed/" + videoId;
+
+          if('{{ data[0][10] }}' == '')
+            embedURL = "//www.youtube.com/embed/lXbFu91a0t4"
+
+          document.getElementById("youtubeVid").src = embedURL;
+
+          if ({{ data[0][7] }} == 0) {
+            document.getElementById('lim_mem').innerHTML = "Limited Membership: No"
+          }
+          if ({{ data[0][7] }} == 1) {
+            document.getElementById('lim_mem').innerHTML = "Limited Membership: Yes"
+          }
+          if ({{ data[0][8] }} == 0) {
+            document.getElementById('recruit').innerHTML = "Recruitment Process: No"
+          }
+          if ({{ data[0][8] }} == 1) {
+            document.getElementById('recruit').innerHTML = "Recruitment Process: Yes"
+          }
+        }
+      </script>
+      
+    </body>
+  </html>
